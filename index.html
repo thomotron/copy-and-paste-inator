@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="oauth,oauth client code,client code,grabber,yeet,copy,paste">
+    <meta name="author" content="Thomotron">
+    <title>Copy & Paste-inator!</title>
+    <style>
+        html,
+        body
+        {
+            background-color: #222;
+        }
+        .container
+        {
+            width: 70%;
+            height: 232px;
+            margin-top: calc(50vh - 176px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .textbox
+        {
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+            border: solid 5px #FFF6;
+            font-size: 50px;
+            line-height: 100px;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #0000;
+            color: #FFFC;
+        }
+        .textboxLabel
+        {
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            font-family: Helvetica, sans-serif;
+            margin-bottom: 20px;
+            font-size: 70px;
+            color: #FFFC;
+            text-align: center;
+            vertical-align: middle;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="textbox" class="textboxLabel">Your code:</label>
+        <input id="textbox" type="text" class="textbox" readonly>
+    </div>
+    <script type="application/javascript">
+    var url_string = window.location.href
+    var url = new URL(url_string);
+    var c = url.searchParams.get("code");
+    document.getElementById("textbox").value = c;
+    </script>
+</body>
+</html>
